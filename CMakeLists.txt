@@ -299,6 +299,8 @@ if(ENABLE_INSTALL)
     "${PROJECT_BINARY_DIR}/CpuFeaturesConfigVersion.cmake"
     COMPATIBILITY SameMajorVersion
   )
+  export(TARGETS CpuFeaturesTargets NAMESPACE CpuFeatures::
+    FILE ${PROJECT_BINARY_DIR}/CpuFeaturesTargets.cmake)
   install(
     FILES
       "${PROJECT_BINARY_DIR}/CpuFeaturesConfig.cmake"
